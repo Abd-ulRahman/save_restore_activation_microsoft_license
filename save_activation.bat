@@ -22,7 +22,7 @@ rem Dump the licnese in registry
 %ScriptPath%psexec -i -s -accepteula reg export HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\{7746D80F-97E0-4E26-9543-26B41FC22F79} .\winactivationkey.reg
 
 cmd /v:on /c copy C:\Windows\System32\winactivationkey.reg %ScriptPath%
-cmd /v:on /c del C:\Windows\System32\winactivationkey.reg
+del C:\Windows\System32\winactivationkey.reg
 
 rem Bring back the services
 net start clipsvc
