@@ -1,4 +1,4 @@
-# Fixed isuue with run from folder
+# Fixed isuue with run from the main folder
 # Must Run As Administrator
 # Offline script to save and restore activation for Microsoft Windows and Office licenses by Thelogh
 ## Backup and Restore Microsoft Windows and Microsoft Office License Activation Offline
