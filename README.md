@@ -1,3 +1,4 @@
+# Fixed isuue with run from folder
 # Must Run As Administrator
 # Offline script to save and restore activation for Microsoft Windows and Office licenses by Thelogh
 # Complete Guide https://www.alldiscoveries.com/backup-and-restore-microsoft-windows-and-microsoft-office-license-activation-offline/
