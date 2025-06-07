@@ -9,8 +9,8 @@ rem V.1.0.0
 
 
 rem Create directories for placing the license and token file.
-if not exist "%ScriptPath%license" cmd /v:on /c md "%ScriptPath%license"
-if not exist "%ScriptPath%GenuineTicket" cmd /v:on /c md "%ScriptPath%GenuineTicket"
+if not exist "%ScriptPath%license" cmd /v:on /c mkdir "%ScriptPath%license"
+if not exist "%ScriptPath%GenuineTicket" cmd /v:on /c mkdir "%ScriptPath%GenuineTicket"
 
 rem Stop the services to get the license and token file
 net stop clipsvc
