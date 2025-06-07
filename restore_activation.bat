@@ -12,7 +12,6 @@ echo Please make sure the internet is disconnected before you continue.
 pause
 
 rem Check the backup directory exist or not
-if not exist "%ScriptPath%" echo The directory that holds backed up licenses for this PC is not exist (Maybe wrong hostname). && goto end
 if not exist "%ScriptPath%license" echo The 'license' directory is missing. && goto end
 if not exist "%ScriptPath%GenuineTicket" echo The 'GenuineTicket' directory is missing. && goto end
 if not exist "%ScriptPath%winactivationkey.reg" echo File 'winactivationkey.reg' is missing && goto end
