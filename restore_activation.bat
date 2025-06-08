@@ -1,7 +1,6 @@
 set ScriptPath=%~dp0
 rem Offline script to save and restore activation for Microsoft Windows and Office licenses by Thelogh
 rem Backup and Restore Microsoft Windows and Microsoft Office License Activation Offline
-rem https://www.alldiscoveries.com/backup-and-restore-microsoft-windows-and-microsoft-office-license-activation-offline/
 rem For all requests write on the blog
 rem REPOSITORY
 rem https://github.com/thelogh/save_restore_activation_microsoft_license
