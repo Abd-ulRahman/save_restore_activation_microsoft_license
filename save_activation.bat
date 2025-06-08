@@ -5,7 +5,7 @@ rem Backup and Restore Microsoft Windows and Microsoft Office License Activation
 rem For all requests write on the blog
 rem REPOSITORY
 rem https://github.com/thelogh/save_restore_activation_microsoft_license
-rem V.1.0.0
+rem V.2.0.0
 
 
 rem Create directories for placing the license and token file.
