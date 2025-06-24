@@ -35,7 +35,7 @@ XCOPY "!backupDir!\WindowsActivation\2.0" %SystemRoot%\spp\store\2.0 /O /X /E /H
 if exist "!backupDir!\OfficeActivation" (
     echo Restoring Office activation...
 XCOPY "!backupDir!\OfficeActivation\tokens.dat" %ProgramData%\Microsoft\Windows\ClipSVC /O /X /H /K /Y
-        echo Office activation restored to %%G >> "!logFile!"
+        echo Office activation restored to your system >> "!logFile!"
     )
 ) else (
     echo Office activation backup not found.
