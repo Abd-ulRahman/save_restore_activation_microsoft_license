@@ -23,7 +23,7 @@ net stop clipsvc
 net stop sppsvc
 
 
-XCOPY %ScriptPath%license\2.0\ C:\Windows\System32\spp\store\2.0 /E /H /C /I /Q
+XCOPY %ScriptPath%license\2.0\ C:\Windows\System32\spp\store\2.0 /E /H /C /I /Q /Y
 cmd /v:on /c XCOPY %ScriptPath%GenuineTicket\tokens.dat C:\ProgramData\Microsoft\Windows\ClipSVC /O /X /H /K /Y
 cmd /v:on /c copy /Y %ScriptPath%winactivationkey.reg C:\Windows\System32\winactivationkey.reg
 %ScriptPath%psexec -i -s -accepteula reg import C:\Windows\System32\winactivationkey.reg
