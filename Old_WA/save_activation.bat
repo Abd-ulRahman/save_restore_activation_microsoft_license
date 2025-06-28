@@ -15,7 +15,7 @@ if not exist "%ScriptPath%GenuineTicket" mkdir "%ScriptPath%GenuineTicket"
 rem Stop the services to get the license and token file
 net stop clipsvc
 net stop sppsvc
-XCOPY C:\Windows\System32\spp\store "%ScriptPath%license" /E /H /C /I /Q
+XCOPY C:\Windows\System32\spp\store "%ScriptPath%license" /E /H /C /I /Q /Y
 cmd /v:on /c XCOPY C:\ProgramData\Microsoft\Windows\ClipSVC\tokens.dat "%ScriptPath%GenuineTicket" /O /X /H /K /Y
 
 rem Dump the licnese in registry 
