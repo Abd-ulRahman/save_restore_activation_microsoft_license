@@ -25,7 +25,7 @@ net stop sppsvc
 :: Restore Windows activation files
 if exist "!backupDir!\WindowsActivation" (
     echo Restoring Windows activation...
-XCOPY "!backupDir!\WindowsActivation\2.0" %SystemRoot%\spp\store\2.0 /O /X /E /H /K /Y
+XCOPY "!backupDir!\WindowsActivation\2.0" %SystemRoot%\System32\spp\store\2.0 /O /X /E /H /K /Y
     echo Windows activation restored from !backupDir!\WindowsActivation >> "!logFile!"
 ) else (
     echo Windows activation backup not found.
