@@ -15,14 +15,14 @@ if not exist "%ScriptPath%GenuineTicket" mkdir "%ScriptPath%GenuineTicket"
 rem Stop the services to get the license and token file
 net stop clipsvc
 net stop sppsvc
-XCOPY C:\Windows\System32\spp\store "%ScriptPath%license" /E /H /C /I /Q /Y
-cmd /v:on /c XCOPY C:\ProgramData\Microsoft\Windows\ClipSVC\tokens.dat "%ScriptPath%GenuineTicket" /O /X /H /K /Y
+XCOPY %SystemRoot%\System32\spp\store "%ScriptPath%license" /E /H /C /I /Q /Y
+cmd /v:on /c XCOPY %ProgramData%\Microsoft\Windows\ClipSVC\tokens.dat "%ScriptPath%GenuineTicket" /O /X /H /K /Y
 
 rem Dump the licnese in registry 
 %ScriptPath%psexec -i -s -accepteula reg export HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\{7746D80F-97E0-4E26-9543-26B41FC22F79} .\winactivationkey.reg
 
-cmd /v:on /c copy C:\Windows\System32\winactivationkey.reg %ScriptPath%
-cmd /v:on /c del C:\Windows\System32\winactivationkey.reg
+cmd /v:on /c copy %SystemRoot%\System32\winactivationkey.reg %ScriptPath%
+cmd /v:on /c del %SystemRoot%\System32\winactivationkey.reg
 
 rem Bring back the services
 net start clipsvc
