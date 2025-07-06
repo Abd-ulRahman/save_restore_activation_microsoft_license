@@ -24,10 +24,10 @@ net stop sppsvc
 
 
 XCOPY %ScriptPath%license\2.0\ C:\Windows\System32\spp\store\2.0 /E /H /C /I /Q /Y
-cmd /v:on /c XCOPY %ScriptPath%GenuineTicket\tokens.dat C:\ProgramData\Microsoft\Windows\ClipSVC /O /X /H /K /Y
-cmd /v:on /c copy /Y %ScriptPath%winactivationkey.reg C:\Windows\System32\winactivationkey.reg
-%ScriptPath%psexec -i -s -accepteula reg import C:\Windows\System32\winactivationkey.reg
-cmd /v:on /c del C:\Windows\System32\winactivationkey.reg
+cmd /v:on /c XCOPY %ScriptPath%GenuineTicket\tokens.dat %ProgramData%\Microsoft\Windows\ClipSVC /O /X /H /K /Y
+cmd /v:on /c copy /Y %ScriptPath%winactivationkey.reg %SystemRoot%\System32\winactivationkey.reg
+%ScriptPath%psexec -i -s -accepteula reg import %SystemRoot%\System32\winactivationkey.reg
+cmd /v:on /c del %SystemRoot%\System32\winactivationkey.reg
 
 echo Restoring license is finished. You may need to check whether there is some errors in the output above.
 echo You computer will reboot after you press any key.
