@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 :: Set backup directory
-set ScriptPath=%~dp0
+set "ScriptPath=%~dp0"
 set "backupDir=%~dp0ActivationBackup"
 set "logFile=%backupDir%\restore_log.txt"
 
@@ -46,7 +46,7 @@ if exist "!backupDir!\winactivationkey.reg" (
     echo Importing registry keys...
     
 copy /Y "!backupDir!\winactivationkey.reg" %SystemRoot%\System32\winactivationkey.reg
-%ScriptPath%PsExec -i -s -accepteula reg import %SystemRoot%\System32\winactivationkey.reg
+"!ScriptPath!\PsExec" -i -s -accepteula reg import %SystemRoot%\System32\winactivationkey.reg
 del %SystemRoot%\System32\winactivationkey.reg
     echo Registry keys imported >> "!logFile!"
 )
