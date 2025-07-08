@@ -22,8 +22,10 @@ rem Stop the services to get the license and token file
 net stop clipsvc
 net stop sppsvc
 
+rem Backup the Windows licnese
 XCOPY %SystemRoot%\System32\spp\store "!backupDir!\license" /E /H /C /I /Q /Y
 
+rem Backup the activation tokens for Office
 XCOPY %ProgramData%\Microsoft\Windows\ClipSVC\tokens.dat "!backupDir!\GenuineTicket" /O /X /H /K /Y
 
 rem Dump the licnese in registry 
