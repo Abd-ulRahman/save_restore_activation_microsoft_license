@@ -46,7 +46,7 @@ if exist "!backupDir!\winactivationkey.reg" (
     echo Importing registry keys...
     
 copy /Y "!backupDir!\winactivationkey.reg" %SystemRoot%\System32\winactivationkey.reg
-"!ScriptPath!PsExec.exe" -i -s -accepteula reg import %SystemRoot%\System32\winactivationkey.reg
+"!ScriptPath!\PsExec.exe" -i -s -accepteula reg import %SystemRoot%\System32\winactivationkey.reg
 del %SystemRoot%\System32\winactivationkey.reg
     echo Registry keys imported >> "!logFile!"
 )
