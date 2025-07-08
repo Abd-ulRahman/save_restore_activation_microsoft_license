@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 :: Set paths for backup and logs
-set ScriptPath=%~dp0
+set "ScriptPath=%~dp0"
 set "backupDir=%~dp0ActivationBackup"
 set "logFile=%backupDir%\backup_log.txt"
 
@@ -34,7 +34,7 @@ XCOPY %ProgramData%\Microsoft\Windows\ClipSVC\tokens.dat "!backupDir!\OfficeActi
 
 rem Dump the licnese in registry 
 :: Backup product keys (if available via registry)
-%ScriptPath%PsExec -i -s -accepteula reg export HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\{7746D80F-97E0-4E26-9543-26B41FC22F79} .\winactivationkey.reg
+"!ScriptPath!\PsExec.exe" -i -s -accepteula reg export HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\{7746D80F-97E0-4E26-9543-26B41FC22F79} .\winactivationkey.reg
 
 copy %SystemRoot%\System32\winactivationkey.reg "!backupDir!"
 
